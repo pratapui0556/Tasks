@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <style>
+	 #container{
+	     width:80%;
+		 height:450px;
+		 border:1px solid black;
+		 margin: 0 auto;
+		 position:relative;
+	  }
+	  #container img{
+	  width:100%;
+	  height:100%;
+	  position:absolute;
+	   }
+	   
+	   #container .btn{
+	   position:absolute;
+	   height:50px;
+	   border:none;
+	   border-radius:20px;
+	   top:200px;
+	   background:#800000;
+	   color:#FFFFFF;
+	   font-size:15px;
+	    }
+		 
+		#container #btn2{
+            position:relative;
+            float:right;
+		 }
+	   
+	 </style>
+	
+
+  </head>
+  <body>
+       
+      <div id="container">
+	           
+	        <img class="slides" src="la.jpg" />
+	        <img class="slides" src="chicago.jpg"/>
+	        <img class="slides" src="ny.jpg"/>
+	        <button class="btn" onclick="plusIndex(-1)"   id="btn1">&#10094 </button> 
+			<button class="btn" onclick="plusIndex(1)"    id="btn2">&#10095 </button>
+	  
+	  </div>
+	  <script>
+	      var index = 1;
+		   function plusIndex(n){
+		   index = index + n;
+		   showImage(index);
+		   }
+		   
+		  showImage(1);
+		   function showImage(n){
+		   var i;
+		   var x = document.getElementsByClassName("slides");
+		   if(n > x.length){ index = 1};
+		   if(n < 1){ index = x.length};
+		   for(i=0;i<x.length;i++){
+		     x[i].style.display = "none";
+		   }
+		   x[index-1].style.display = "block";
+			}
+			autoSlide();
+			function autoSlide(){
+		   var i;
+		   var x = document.getElementsByClassName("slides");
+		   for(i=0;i<x.length;i++){
+		     x[i].style.display = "none";
+		   }
+		   if(index > x.length){index = 1}
+		   x[index-1].style.display = "block";
+		   index++;
+			   setTimeout(autoSlide,2000);
+			}
+	  </script>
+	  
+  </body>
+</html>

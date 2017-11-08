@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- force IE to use the latest compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- wrapper starts-->
+    <div class="wrapper">
+
+        <!-- table starts-->
+        <div class="tableWrap" id="viewData">
+            <!-- row starts-->
+            <div class="row head">
+                <div class="cell">
+                    Employee ID
+                </div>
+                <div class="cell">
+                    Employee Name
+                </div>
+                <div class="cell">
+                    Skills
+                </div>
+                <div class="cell">
+                    Actions
+                </div>
+            </div>
+            <!-- row ends-->
+        </div>
+        <!-- table ends-->
+        <div class="buttonsCont">
+            <button onclick="addRow(this)">Add </button>
+        </div>
+
+
+        <!-- Section starts-->
+    <div class="updateSection" id="updateSection">
+        <div class="container" id="container">
+            <h2></h2>
+            <form id="updateForm">
+                <div class="row">
+                    <div class="cell">
+                        Employee ID
+                    </div>
+                    <div class="cell">
+                        <input type="text" id="empID" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        Employee Name
+                    </div>
+                    <div class="cell">
+                        <input type="text" id="empName" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        Skills
+                    </div>
+                    <div class="cell">
+                        <input type="text" id="skills" />
+                    </div>
+                </div>
+                   </form>
+                <div class="buttonsCont">
+                    <button onclick="updateSection()" >Update</button>
+                    <button onclick="closeSection()">Cancel</button>
+                </div>
+         
+        </div>
+    </div>
+    <!-- Section starts-->
+    </div>
+    <!-- wrapper ends-->
+
+
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
